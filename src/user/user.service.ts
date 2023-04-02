@@ -23,6 +23,7 @@ export class UserService {
     const passwordHash = await bcrypt.hash(createUserDto.password, saltOrRounds)
     const user = {
       ...createUserDto,
+      type_user:  1,
       password: passwordHash
     }
 
